@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="favicon.ico" type="image/x-icon" rel="icon" />
+        <style>
+            .hidden {
+                display: none;
+            }
+        </style>
+    </head>
+    <body>
+        <nav>
+            <a href="#" onclick="navigate('home')">Home</a>
+            <a href="#" onclick="navigate('exercise')">Exercise</a>
+        </nav>
+        <div class="page home">TODO write content</div>
+        <div class="page exercise hidden">Second Content</div>
+        
+        <script>
+            function navigate(pageId) {
+                var pages = document.getElementsByClassName("page");
+                
+                for (var iter = 0; iter < pages.length; iter++) {
+                    var page = pages[iter];
+                    
+                    if (page.classList.contains(pageId)) {
+                        page.classList.remove('hidden');
+                    } else {
+                        page.className += ' hidden';
+                    }
+                }
+                
+            }
+        </script>
+    </body>
+</html>
